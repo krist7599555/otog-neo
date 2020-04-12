@@ -1,0 +1,24 @@
+mode: interactive
+compile: ruby build.ruby
+timeout: 1
+testcase:
+  1:
+    recompile: true
+    env:
+      OTOG_CLI_DEFINE: -DType=bool -DRandom={1,0,1,1,0}
+  3:
+    recompile: true
+    env:
+      OTOG_CLI_DEFINE: -DType=int -DRandom={-1000,-100000,-1,0,1,2,3,200,2000,10000}
+  5:
+    recompile: true
+    env:
+      OTOG_CLI_DEFINE: -DType=std::string -DRandom={"fuck","you","mann","m","maaa","mann","maa","?"}
+  7:
+    recompile: true
+    env:
+      OTOG_CLI_DEFINE: -DType=int64_t -DRandom={1LL,13LL,-1LL,9LL,INT_MAX,INT_MAX+1000,UINT_MAX,LLONG_MIN,LLONG_MAX}
+  9:
+    recompile: true
+    env:
+      OTOG_CLI_DEFINE: -DType=std::tuple<short,char> -DRandom={std::make_tuple(1,'c'),std::make_tuple(2,'c'),std::make_tuple(1,'a'),std::make_tuple(2,'a')}

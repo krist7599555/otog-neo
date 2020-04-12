@@ -1,0 +1,3 @@
+mode: interactive
+compile: g++ -std=c++17 -O2 "$OTOG_PROBLEM_DIR/check.cpp" "$1" -DOTOG_SERVER -o "$OTOG_OUT_PROG_FILE"
+# compile: g++ -std=c++17 -O2 "check.cpp" "$1" -DOTOG_SERVER -o "$OTOG_OUT_PROG_FILE"
