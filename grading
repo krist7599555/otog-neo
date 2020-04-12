@@ -1,0 +1,6 @@
+#! /usr/bin/env python3 -u
+import os
+import sys
+if not os.path.isfile("./bin/is_equal"):
+  os.system("./bin/install.sh")
+os.system("./src/grading.py " + " ".join(sys.argv))
